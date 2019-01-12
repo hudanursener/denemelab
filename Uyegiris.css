@@ -1,0 +1,97 @@
+body{
+    background-image: url("http://soframiz.com/wp-content/uploads/ikramliklar.jpg");
+}
+#EpostaCard{
+    height: 40px;
+    width: 250px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 10px;
+}
+#SifreCard{
+    height: 40px;
+    width: 250px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 10px;
+}
+.card-body{
+    line-height: 0px;
+}
+#GirisYapButon{
+    background-color: rgb(218, 208, 196);
+    border: 1px solid rgb(146, 99, 146);
+    margin-left: 160px;
+    border-radius: 15px;
+    color: rgb(46, 5, 46);
+}
+#GirisYapKutu{
+    border: 2px solid rgb(146, 99, 146);
+    margin-left: 250px;
+    margin-top: 230px;
+    position: absolute;
+    background-color: rgb(245, 244, 244);
+}
+#BeniHatirla{
+    margin-top: -20px;
+}
+#exampleCheck1{
+    margin-top: -8px;
+    height: 17px;
+    width: 17px;
+}
+#UyeOlKutu{
+    border: 2px solid rgb(146, 99, 146);
+    margin-left: 650px;
+    margin-top: 80px;
+    position: absolute;
+    background-color: rgb(245, 244, 244);
+    height: 500px;
+}
+#AdiKutu{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+#SoyadiKutu{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+}
+#EpostaCard-UyeOl{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+}
+#SifreCard-UyeOl{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+}
+#SehirSec{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+}#IlceSec{
+    height: 40px;
+    width: 360px;
+    border: 2px solid rgb(146, 99, 146);
+    margin-bottom: 15px;
+}
+#UyeOlButon{
+    background-color: rgb(218, 208, 196);
+    border: 1px solid rgb(146, 99, 146); 
+    width: 360px;
+    border-radius: 15px;
+    color: rgb(46, 5, 46);
+}
+.UyeOlYazi{
+    margin-top: 15px;
+    position: absolute;
+    font-size: 21px;
+    font-family: sans-serif;
+}
