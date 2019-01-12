@@ -1,0 +1,47 @@
+#EnUstKisim{
+    background-color: rgb(215, 213, 218);
+    border-radius: 0px;
+    height: 60px;
+}
+.SayfaAdi{
+    color: rgb(92, 39, 146) !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 36px;
+    font-size: 25px;
+     
+}
+#anasayfaButon{
+    color: black;
+    margin-left: 975px;
+    
+}
+#AnasayfaButonYazi{
+    background-color: rgb(114, 114, 175);
+    border: 1px solid rgb(114, 114, 175);
+    width: 150px;
+}
+.btn-dark{
+    margin-left: -90px;
+}
+.profilUstKisim{
+    height: 280px;
+    width: 1250px;
+    border: 2px solid  rgb(92, 39, 146);
+    margin-left: 60px;
+}
+.profilResim{
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.profilKisiBilgileri {
+    margin-top: -183px;
+    margin-left: 300px;
+    font-size: 21px;
+    color: #2b0e2b;  
+}
+.btn-secondary{
+    margin-left: 780px;
+    margin-top: 10px;
+}
