@@ -1,3 +1,4 @@
+
 #EnUstKisim{
     background-color: rgb(215, 213, 218);
     border-radius: 0px;
@@ -12,7 +13,7 @@
 }
 #anasayfaButon{
     color: black;
-    margin-left: 975px;
+    margin-left: 665px;
     
 }
 #AnasayfaButonYazi{
@@ -21,7 +22,13 @@
     width: 150px;
 }
 .btn-dark{
-    margin-left: -90px;
+    
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 5px;
 }
 .profilUstKisim{
     height: 280px;
@@ -44,4 +51,31 @@
 .btn-secondary{
     margin-left: 780px;
     margin-top: 10px;
+}
+.ProfilYorumKutusu{
+    height: 450px;
+    width: 400px;
+    float: left;
+    margin-left: 60px;
+    border: 2px solid  rgb(92, 39, 146);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #2b0e2b;  
+    font-size: 19px;
+    font-family:inherit;
+}
+.ProfilYorumKutusu-yazi{
+    height: 120px;
+    width: 396px;
+    margin-top: 60px;
+    
+}
+.btn-danger{
+    margin-left: 280px !important;
+    background-color: blueviolet !important;
+    border: 1px solid  rgb(92, 39, 146) !important;
+    margin-top: 5px;
+}
+.list-group-flush{
+    font-size: 18px;
 }
