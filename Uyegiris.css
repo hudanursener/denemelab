@@ -33,6 +33,24 @@ body{
 #BeniHatirla{
     margin-top: -20px;
 }
+#ilceler{
+    width: 245px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid rgb(206, 212, 218);
+    
+}
+.ilceyazi{
+    line-height: 1;
+}
+.ilceButon{
+    height: 30px;
+    margin-left: 6px;
+    position: absolute;
+    border-radius: 7px;
+    border: 1px solid #7a5f86;
+    cursor: pointer;
+}
 #exampleCheck1{
     margin-top: -8px;
     height: 17px;
