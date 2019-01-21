@@ -15,3 +15,15 @@ function ilceleriGetir(params) {
     httpistegi.open("GET", adres, true);
     httpistegi.send();
 }
+function uyeEkle(){
+    localStorage.setItem('kullaniciAdi',document.getElementById('AdiKutu').value);
+    localStorage.setItem('sifre',document.getElementById('SoyadiKutu').value);
+    alert('Kaydınız Basarıyla Alınmıştır');
+}
+function girisYap(){
+    if(document.getElementById('exampleInputEmail1').value == localStorage.getItem('kullaniciAdi') && document.getElementById('exampleInputPassword1').value == localStorage.getItem('sifre') ){
+        window.location.href = 'AnaSayfa.html';
+    }else{
+        alert('Kullanıcı Adı veya Şifre hatalı !');
+    }
+}
