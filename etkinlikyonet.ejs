@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="anasayfa.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script type="text/javascript" src="home.js"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .navbar {
+    background-color: #2b5ca2;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navbar a.navbar-brand {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .navbar a.navbar-brand span {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .navbar ul {
+    margin-left: 650px;
+    list-style: none;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 50px;
+    margin-top: 0px;
+    position: absolute;
+  }
+
+  .navbar ul li {
+    display: inline-block;
+  }
+
+  .navbar ul li a {
+    display: block;
+    text-align: center;
+    min-width: 120px;
+    padding: 0 30px;
+  }
+
+  .navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar .navbar-toggler {
+    display: none;
+  }
+
+  .intro {
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.hizliresim.com/ZX82zk.png') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+  }
+
+  .container {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+  }
+
+  .container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vh;
+  }
+
+  #htmls {
+    background-color: #000;
+  }
+
+  #css {}
+
+  #javascript {}
+
+  @media (max-width: 991px) {
+    .navbar ul {
+      padding: 0 10px;
+    }
+
+    .navbar ul li a {
+      min-width: 100px;
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar ul {
+      width: 100%;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      /* height: auto; */
+      height: 100vh;
+      max-height: 0;
+      overflow: hidden;
+      transition: all ease-in-out 0.3s;
+      
+    }
+
+    .navbar ul.open {
+      max-height: 100vh;
+    }
+
+    .navbar ul li {
+      width: 100%;
+      /* border-bottom: 1px solid rgba(255,255,255,0.3); */
+    }
+
+    .navbar ul li a {
+      padding: 0;
+    }
+
+    .navbar .navbar-toggler {
+      display: block;
+      position: absolute;
+      height: 40px;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      color: #fff;
+      border: 3px solid #fff;
+      /* border: none; */
+      /* border-radius: 4px; */
+      outline: none;
+      padding: 0 5px;
+      cursor: pointer;
+    }
+
+    .navbar .navbar-toggler span,
+    .navbar .navbar-toggler span::before,
+    .navbar .navbar-toggler span::after {
+      display: block;
+      content: '';
+      background-color: #fff;
+      height: 3px;
+      width: 28px;
+      border-radius: 4px;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .navbar .navbar-toggler span::before {
+      transform: translateY(-8px);
+    }
+
+    .navbar .navbar-toggler span::after {
+      transform: translateY(5px);
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span {
+      /* transform: rotate(90deg); */
+      background-color: transparent;
+      /* transform: scale(0.85) rotate(270deg); */
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span::before {
+      transform: translateY(0px) rotate(45deg);
+      /* transform: translateY(0px) scale(0.75) rotate(45deg); */
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span::after {
+      transform: translateY(-3px) rotate(-45deg);
+      /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
+    }
+  }
+
+  .ucluKart {
+    margin-top: 65px;
+  }
+
+
+
+  body {
+    background: #eee;
+    font: 12px Lucida sans, Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+  }
+
+  a {
+    color: #2b5ca2;
+  }
+
+  /*========*/
+
+  .form-wrapper {
+    background-color: #f6f6f6;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
+    background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
+    background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
+    background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+    border-color: #dedede #bababa #aaa #bababa;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 3px rgba(255, 255, 255, .1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+    -moz-box-shadow: 0 3px 3px rgba(255, 255, 255, .1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+    box-shadow: 0 3px 3px rgba(255, 255, 255, .1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+    margin: 10px;
+    overflow: hidden;
+    padding: 8px;
+    width: 320px;
+    margin-left: -380px;
+    margin-top: 13px;
+    position: absolute;
+
+  }
+
+  .form-wrapper #search {
+    border: 1px solid #CCC;
+    -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+    -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+    box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    float: left;
+    font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+    height: 15px;
+    padding: 10px;
+    width: 220px;
+    margin-top: 5px;
+  }
+
+  .form-wrapper #search:focus {
+    border-color: #aaa;
+    -webkit-box-shadow: 0 1px 1px #bbb inset;
+    -moz-box-shadow: 0 1px 1px #bbb inset;
+    box-shadow: 0 1px 1px #bbb inset;
+    outline: 0;
+  }
+
+  .form-wrapper #search:-moz-placeholder,
+  .form-wrapper #search:-ms-input-placeholder,
+  .form-wrapper #search::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+  }
+
+  .form-wrapper #submit {
+    background-color: #2b5ca2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5ca2), to(#2b5ca2));
+    background-image: -webkit-linear-gradient(top, #2b5ca2, #2b5ca2);
+    background-image: -moz-linear-gradient(top, #2b5ca2, #2b5ca2);
+    background-image: -ms-linear-gradient(top, #2b5ca2, #2b5ca2);
+    background-image: -o-linear-gradient(top, #2b5ca2, #2b5ca2);
+    background-image: linear-gradient(top, #2b5ca2, #2b5ca2);
+    border: 1px solid #2b5ca2;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+    color: #fafafa;
+    cursor: pointer;
+    height: 30px;
+    float: right;
+    font: 15px Arial, Helvetica;
+    padding: 0;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+    width: 80px;
+  }
+
+  .form-wrapper #submit:hover,
+  .form-wrapper #submit:focus {
+    background-color: #2b5ca2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0483a0), to(#31b2c3));
+    background-image: -webkit-linear-gradient(top, #0483a0, #31b2c3);
+    background-image: -moz-linear-gradient(top, #0483a0, #31b2c3);
+    background-image: -ms-linear-gradient(top, #0483a0, #31b2c3);
+    background-image: -o-linear-gradient(top, #0483a0, #31b2c3);
+    background-image: linear-gradient(top, #0483a0, #31b2c3);
+  }
+
+  .form-wrapper #submit:active {
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    outline: 0;
+  }
+
+  .form-wrapper #submit::-moz-focus-inner {
+    border: 0;
+  }
+
+  .sozlesme {
+    margin-right: 600px;
+
+  }
+  .card2{
+    height: 350px;
+    width: 550px;
+    margin-top: -400px;
+    margin-left: 730px;
+    margin-bottom: 50px;
+  }
+  .AltKisim{
+    height: 400px;
+    background-color: #717881;
+  }
+  .AltKisim a.AltNavbar {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    color: white;
+  }
+  .hakkimizdaYazi{
+    color: white;
+    margin-left: -500px;
+    margin-top: 40px;
+    font-size: 22px;
+    position: absolute;
+  }
+  .KategorilerYazi{
+    color: white;
+    margin-left: 550px;
+    margin-top: 40px;
+    font-size: 22px;
+    position: absolute;
+  }
+  .KategorilerYazi li{
+   list-style-type:none;
+  }
+  .KategorilerYazi li a{
+    color: white;
+    margin-top: 100px;
+  }
+ 
+</style>
+
+<script>
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarMenu = document.querySelector('.navbar ul');
+  const navbarLinks = document.querySelectorAll('.navbar a');
+
+  navbarToggler.addEventListener('click', navbarTogglerClick);
+
+  function navbarTogglerClick() {
+    navbarToggler.classList.toggle('open-navbar-toggler');
+    navbarMenu.classList.toggle('open');
+  }
+
+  navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
+
+  function navbarLinkClick() {
+    if (navbarMenu.classList.contains('open')) {
+      navbarToggler.click();
+    }
+  }
+</script>
+
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand"><span>Tec</span><span>hno</span><span>Event</span></a>
+    <!--     <a href="#" class="navbar-brand"><img src="https://www.dropbox.com/s/zzwcz0xpj95sy7p/logo%20%2810%29.png?raw=1" style="width: 50px; vertical-align: middle;"></a> -->
+
+    <ul>
+      <form class="form-wrapper">
+        <input type="text" id="search" placeholder="Arama Yapın..." required>
+        <input type="submit" value="Ara" id="submit">
+      </form>
+      <li><a href="">Anasayfa</a></li>
+      <li><a href="">Etkinliklere Göz At</a></li>
+      <li><a href="">Oturum Aç</a></li>
+    </ul>
+    <button class="navbar-toggler">
+      <span></span>
+    </button>
+  </nav>
+
+  <header class="intro"></header>
+
+  <div class="card-group ucluKart">
+    <div class="card">
+      <img class="card-img-top" src="https://i.hizliresim.com/OvGJl0.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title" style="text-align:center">Özel Meetingler</h5>
+        <p class="card-text">
+          Bazı şirketlerin özel meetinglerine katılma fırsatını yakala.
+        </p>
+        <p class="card-text"><small class="text-muted">Son güncelleme 3 dakika önce</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.hizliresim.com/qd59OW.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title" style="text-align:center">Konferanslar</h5>
+        <p class="card-text">Önemli şahsiyetlerin ve kuruluşların Konferanslarına katıl.</p>
+        <p class="card-text"><small class="text-muted">Son güncelleme 6 dakika önce</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.hizliresim.com/0RYbJW.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title" style="text-align:center">Eğlenceli Ortamlarmı Arıyorsun?</h5>
+        <p class="card-text">
+          Şehrin diğer ucunda ki insanlarla birlikte eğlen !
+        </p>
+        <p class="card-text"><small class="text-muted">Son güncelleme 7 saat önce</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="sozlesme">
+    <img src="https://i.hizliresim.com/5aZpWz.png" />
+
+  </div>
+  <div class="card card2 ">
+    <div class="card-header">
+      Hakkımızda
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p> TECHNOEVENT aklınıza gelebilecek her türlü etkinliğe </br> kolayca erişmenizi,etkinlikleir kenidnizin </br>  oluşturmasını sağlayan bir platformdur 
+        </p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="AltKisim">
+     
+      <a href="#" class="AltNavbar"><span>Tec</span><span>hno</span><span>Event</span></a>
+      <a href="#" class="hakkimizdaYazi">Hakkımızda </a>
+      <div class="KategorilerYazi">Kategoriler
+      <li><a href="#">&nbsp</a></li>  
+      <li><a href="#">Eğitim</a></li>  
+      <li><a href="#">Bilişim</a>  </li>  
+      <li><a href="#">Sanayi</a> </li>  
+      <li><a href="#">Kamp-Gezi</a> </li>  
+      <li><a href="#">Festival</a></li>  
+      <li><a href="#">Oyun</a> </li>  
+      <li><a href="#">Konferans</a></li>  
+      <li><a href="#">Fuar</a> </li>  
+      <li><a href="#">Sergi</a> </li>  
+      <li><a href="#">Seminer</a></li>  
+      <li><a href="#">Sempozyum</a> </li>  
+      
+      </div>
+
+
+
+  </div>
+</body>
+
+</html>
